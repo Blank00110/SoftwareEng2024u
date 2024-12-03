@@ -29,7 +29,7 @@ namespace SoftwareEng2024
             {
                 MessageBox.Show($"Welcome, {guestID}. Redirecting to the dashboard...", "Guest Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                var GuestForm = new Guest();
+                var GuestForm = new AboutUs();
                 GuestForm.Show();
                 this.Hide();
             }

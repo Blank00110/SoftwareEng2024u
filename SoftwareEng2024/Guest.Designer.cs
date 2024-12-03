@@ -1,6 +1,6 @@
 ﻿namespace SoftwareEng2024
 {
-    partial class Guest
+    partial class AboutUs
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Guest));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutUs));
             this.panel1 = new System.Windows.Forms.Panel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
@@ -65,11 +65,12 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 213);
+            this.label2.Location = new System.Drawing.Point(12, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(706, 399);
+            this.label2.Size = new System.Drawing.Size(732, 360);
             this.label2.TabIndex = 2;
             this.label2.Text = resources.GetString("label2.Text");
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // linkLabel1
             // 
@@ -87,20 +88,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Perpetua Titling MT", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 87);
+            this.label1.Location = new System.Drawing.Point(8, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(244, 48);
             this.label1.TabIndex = 0;
             this.label1.Text = "About Us";
             // 
-            // Guest
+            // AboutUs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1240, 754);
             this.Controls.Add(this.panel1);
-            this.Name = "Guest";
-            this.Text = "Guest";
+            this.Name = "AboutUs";
+            this.Text = "ABOUT US";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

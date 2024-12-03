@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SoftwareEng2024
 {
-    public partial class Guest : Form
+    public partial class AboutUs : Form
     {
-        public Guest()
+        public AboutUs()
         {
             InitializeComponent();
         }
@@ -29,6 +29,11 @@ namespace SoftwareEng2024
             var MainForm = new Main();
             MainForm.Show();
             this.Hide();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

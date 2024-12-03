@@ -10,11 +10,20 @@ using System.Windows.Forms;
 
 namespace SoftwareEng2024
 {
-    public partial class Dashboard : Form
+    public partial class Memberdashboard : Form
     {
-        public Dashboard()
+        public Memberdashboard()
         {
             InitializeComponent();
+        }
+
+        private void CONBTN_Click(object sender, EventArgs e)
+        {
+            // Create an instance of the DCM form
+            DCM dcmForm = new DCM();
+
+            // Show the DCM form
+            dcmForm.Show();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

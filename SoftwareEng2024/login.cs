@@ -2,6 +2,9 @@
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Configuration;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace SoftwareEng2024
 {
@@ -40,22 +43,79 @@ namespace SoftwareEng2024
             string username = txtUsername.Text;
             string password = txtPassword.Text;
 
+            // Validate inputs
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
-                MessageBox.Show("Please enter both username and password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please fill in both fields.");
                 return;
             }
 
-            if (AuthenticateUser(username, password))
+            try
             {
-                MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                var dashboard = new Dashboard();
-                dashboard.Show();
-                this.Hide();
+                string connectionString = ConfigurationManager.ConnectionStrings["UserDatabaseConnection"].ConnectionString;
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Query to retrieve the hashed password and memberId from the database
+                    string query = @"
+                SELECT U.PasswordHash, M.MemberID 
+                FROM Users U
+                INNER JOIN Members M ON U.UserID = M.UserID
+                WHERE U.Username = @Username";
+
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@Username", username);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read()) // Check if the query returned a result
+                            {
+                                string storedPasswordHash = reader["PasswordHash"].ToString();
+                                int memberId = Convert.ToInt32(reader["MemberID"]);
+                                string inputPasswordHash = HashPassword(password);
+
+                                if (storedPasswordHash == inputPasswordHash)
+                                {
+                                    MessageBox.Show("Login successful!");
+
+                                    // Pass the MemberID to the Memberdashboard
+                                    Memberdashboard memberDashboard = new Memberdashboard();
+                                    memberDashboard.Show();
+                                    this.Hide();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Invalid username or password.");
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Invalid username or password.");
+                            }
+                        }
+                    }
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Log the exception or display it for debugging
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+        }
+
+        private string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
             }
         }
 
@@ -76,35 +136,23 @@ namespace SoftwareEng2024
             this.Hide();
         }
 
-        private bool AuthenticateUser(string username, string password)
-        {
-            try
-            {
-                string connectionString = ConfigurationManager.ConnectionStrings["UserDatabaseConnection"].ConnectionString;
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-                    string query = "SELECT COUNT(1) FROM Users WHERE Username = @Username AND Password = @Password";
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@Username", username);
-                        command.Parameters.AddWithValue("@Password", password);
-                        return Convert.ToInt32(command.ExecuteScalar()) > 0;
-                    }
-                }
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show($"Error during login: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-        }
+        
 
         private void lnkReturnToMain_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             var mainForm = new Main();
             mainForm.Show();
             this.Hide();
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
