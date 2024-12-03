@@ -35,6 +35,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lnkReturnToMain = new System.Windows.Forms.LinkLabel();
             this.lnkSignUp = new System.Windows.Forms.LinkLabel();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lnkForgotPassword = new System.Windows.Forms.LinkLabel();
@@ -42,7 +43,6 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblOr = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lnkReturnToMain = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -50,12 +50,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.IndianRed;
-            this.panel1.BackgroundImage = global::SoftwareEng2024.Properties.Resources.toghther_culter;
+            this.panel1.BackgroundImage = global::SoftwareEng2024.Properties.Resources.Untitled_design;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.btnTogglePassword);
             this.panel1.Controls.Add(this.txtPassword);
-            this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -106,7 +106,7 @@
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(485, 256);
+            this.txtUsername.Location = new System.Drawing.Point(134, 140);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(326, 30);
             this.txtUsername.TabIndex = 0;
@@ -114,19 +114,32 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.LightGray;
+            this.panel4.BackColor = System.Drawing.Color.Gray;
             this.panel4.Controls.Add(this.lnkReturnToMain);
             this.panel4.Controls.Add(this.lnkSignUp);
             this.panel4.Controls.Add(this.lblPassword);
             this.panel4.Controls.Add(this.lnkForgotPassword);
+            this.panel4.Controls.Add(this.txtUsername);
             this.panel4.Controls.Add(this.lblLogo);
             this.panel4.Controls.Add(this.lblUsername);
             this.panel4.Controls.Add(this.lblOr);
             this.panel4.Controls.Add(this.panel2);
-            this.panel4.Location = new System.Drawing.Point(358, 113);
+            this.panel4.Location = new System.Drawing.Point(351, 118);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(593, 446);
+            this.panel4.Size = new System.Drawing.Size(600, 441);
             this.panel4.TabIndex = 10;
+            // 
+            // lnkReturnToMain
+            // 
+            this.lnkReturnToMain.AutoSize = true;
+            this.lnkReturnToMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lnkReturnToMain.Location = new System.Drawing.Point(238, 402);
+            this.lnkReturnToMain.Name = "lnkReturnToMain";
+            this.lnkReturnToMain.Size = new System.Drawing.Size(119, 20);
+            this.lnkReturnToMain.TabIndex = 10;
+            this.lnkReturnToMain.TabStop = true;
+            this.lnkReturnToMain.Text = "Return to Main";
+            this.lnkReturnToMain.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkReturnToMain_LinkClicked);
             // 
             // lnkSignUp
             // 
@@ -201,18 +214,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 1);
             this.panel2.TabIndex = 6;
-            // 
-            // lnkReturnToMain
-            // 
-            this.lnkReturnToMain.AutoSize = true;
-            this.lnkReturnToMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lnkReturnToMain.Location = new System.Drawing.Point(238, 402);
-            this.lnkReturnToMain.Name = "lnkReturnToMain";
-            this.lnkReturnToMain.Size = new System.Drawing.Size(119, 20);
-            this.lnkReturnToMain.TabIndex = 10;
-            this.lnkReturnToMain.TabStop = true;
-            this.lnkReturnToMain.Text = "Return to Main";
-            this.lnkReturnToMain.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkReturnToMain_LinkClicked);
             // 
             // login
             // 
