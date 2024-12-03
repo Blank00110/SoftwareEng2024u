@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLogout = new System.Windows.Forms.Button();
             this.ChatBox_Button = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +45,16 @@
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 0;
             // 
+            // ChatBox_Button
+            // 
+            this.ChatBox_Button.Location = new System.Drawing.Point(486, 172);
+            this.ChatBox_Button.Name = "ChatBox_Button";
+            this.ChatBox_Button.Size = new System.Drawing.Size(105, 32);
+            this.ChatBox_Button.TabIndex = 36;
+            this.ChatBox_Button.Text = "ChatBox";
+            this.ChatBox_Button.UseVisualStyleBackColor = true;
+            this.ChatBox_Button.Click += new System.EventHandler(this.ChatBox_Button_Click);
+            // 
             // btnLogout
             // 
             this.btnLogout.Location = new System.Drawing.Point(243, 130);
@@ -54,16 +64,6 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // ChatBox_Button
-            // 
-            this.ChatBox_Button.Location = new System.Drawing.Point(512, 172);
-            this.ChatBox_Button.Name = "ChatBox_Button";
-            this.ChatBox_Button.Size = new System.Drawing.Size(105, 32);
-            this.ChatBox_Button.TabIndex = 36;
-            this.ChatBox_Button.Text = "ChatBox";
-            this.ChatBox_Button.UseVisualStyleBackColor = true;
-            this.ChatBox_Button.Click += new System.EventHandler(this.ChatBox_Button_Click);
             // 
             // Dashboard
             // 
