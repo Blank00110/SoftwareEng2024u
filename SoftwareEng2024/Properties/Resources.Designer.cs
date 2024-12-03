@@ -163,6 +163,26 @@ namespace SoftwareEng2024.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap tg1 {
+            get {
+                object obj = ResourceManager.GetObject("tg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tg11 {
+            get {
+                object obj = ResourceManager.GetObject("tg11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap toghther_culter {
             get {
                 object obj = ResourceManager.GetObject("toghther culter", resourceCulture);

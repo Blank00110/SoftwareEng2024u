@@ -146,6 +146,8 @@
     <Content Include="App.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\tg1.jpeg" />
+    <None Include="Resources\tg1.jpg" />
     <None Include="Resources\Untitled design.png" />
     <None Include="Resources\logout.png" />
     <None Include="Resources\istockphoto-625736338-612x612.jpg" />

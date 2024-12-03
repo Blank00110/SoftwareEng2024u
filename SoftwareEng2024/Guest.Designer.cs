@@ -56,10 +56,10 @@
             this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.linkLabel2.Location = new System.Drawing.Point(1102, 697);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(60, 20);
+            this.linkLabel2.Size = new System.Drawing.Size(63, 20);
             this.linkLabel2.TabIndex = 3;
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Signup";
+            this.linkLabel2.Text = "Join us";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // label2
@@ -67,7 +67,7 @@
             this.label2.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 213);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1202, 215);
+            this.label2.Size = new System.Drawing.Size(706, 399);
             this.label2.TabIndex = 2;
             this.label2.Text = resources.GetString("label2.Text");
             // 
