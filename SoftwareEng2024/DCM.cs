@@ -80,5 +80,15 @@ namespace SoftwareEng2024
             }
 
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You have been logged out.", "Logout", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Return to Main page
+            var mainForm = new Main();
+            mainForm.Show();
+            this.Hide();
+        }
     }
 }

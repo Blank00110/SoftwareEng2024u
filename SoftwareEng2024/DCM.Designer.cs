@@ -48,10 +48,12 @@
             this.Event = new System.Windows.Forms.Button();
             this.Profile_icon = new System.Windows.Forms.PictureBox();
             this.Membership = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Memebrship_icon)).BeginInit();
@@ -59,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Chat_icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Home_icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Profile_icon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -108,10 +111,11 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.dataGridView2);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(934, 571);
+            this.tabPage1.Size = new System.Drawing.Size(934, 630);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "CONTENT ACESSED";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -176,6 +180,7 @@
             this.btnLogout.TabIndex = 43;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // Memebrship_icon
             // 
@@ -272,6 +277,16 @@
             this.Membership.Text = "Membership";
             this.Membership.UseVisualStyleBackColor = true;
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.Size = new System.Drawing.Size(928, 624);
+            this.dataGridView2.TabIndex = 0;
+            // 
             // DCM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -286,6 +301,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Memebrship_icon)).EndInit();
@@ -293,6 +309,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Chat_icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Home_icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Profile_icon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -319,5 +336,6 @@
         private System.Windows.Forms.Button Event;
         private System.Windows.Forms.PictureBox Profile_icon;
         private System.Windows.Forms.Button Membership;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }

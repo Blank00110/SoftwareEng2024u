@@ -81,7 +81,7 @@ namespace SoftwareEng2024
                                     MessageBox.Show("Login successful!");
 
                                     // Pass the MemberID to the Memberdashboard
-                                    Memberdashboard memberDashboard = new Memberdashboard();
+                                    Memberdashboard memberDashboard = new Memberdashboard(memberId--);
                                     memberDashboard.Show();
                                     this.Hide();
                                 }

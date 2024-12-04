@@ -26,5 +26,10 @@ namespace SoftwareEng2024
             mainForm.Show();
             this.Hide();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
