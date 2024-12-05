@@ -35,17 +35,16 @@ namespace SoftwareEng2024
             try
             {
                 string connectionString = ConfigurationManager.ConnectionStrings["UserDatabaseConnection"].ConnectionString;
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                // Open the connection
+
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
 
-                    // Query to fetch FirstName and LastName of the member
+                    // Query to fetch the Name of the member
                     string query = @"
-                        SELECT FirstName, LastName
-                        FROM Members
-                        WHERE MemberID = @MemberID";
+                SELECT Name
+                FROM Members
+                WHERE MemberID = @MemberID";
 
                     // Create the command
                     using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -58,14 +57,11 @@ namespace SoftwareEng2024
                         {
                             if (reader.Read())
                             {
-                                // Safely retrieve FirstName and LastName
-                                string firstName = reader["FirstName"]?.ToString() ?? "Unknown";
-                                string lastName = reader["LastName"]?.ToString() ?? "Unknown";
+                                // Safely retrieve the Name
+                                string name = reader["Name"]?.ToString() ?? "Unknown";
 
-                                // Concatenate FirstName and LastName
-                                string fullName = $"{firstName} {lastName}";
-                                lblname.Text = $"{fullName}";
-
+                                // Display the name
+                                lblname.Text = name;
                             }
                             else
                             {
@@ -81,9 +77,10 @@ namespace SoftwareEng2024
                 // Log the error (if logging mechanism is available)
                 // Show user-friendly error message
                 MessageBox.Show("An error occurred while fetching the member details. Please try again later.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Console.WriteLine($"Error fetching full name: {ex.Message}");
+                Console.WriteLine($"Error fetching name: {ex.Message}");
             }
         }
+
 
         private void LoadMembershipType()
         {

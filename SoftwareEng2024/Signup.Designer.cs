@@ -30,6 +30,12 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.learnmore1 = new System.Windows.Forms.Button();
+            this.cmbInterests = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbMembershipType = new System.Windows.Forms.ComboBox();
             this.lnkReturnToMain = new System.Windows.Forms.LinkLabel();
             this.btnToggleConfirmPassword = new System.Windows.Forms.Button();
             this.btnTogglePassword = new System.Windows.Forms.Button();
@@ -64,6 +70,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightGray;
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.learnmore1);
+            this.panel2.Controls.Add(this.cmbInterests);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.cmbMembershipType);
             this.panel2.Controls.Add(this.lnkReturnToMain);
             this.panel2.Controls.Add(this.btnToggleConfirmPassword);
             this.panel2.Controls.Add(this.btnTogglePassword);
@@ -80,15 +92,71 @@
             this.panel2.Controls.Add(this.lblEmail);
             this.panel2.Controls.Add(this.lblPassword);
             this.panel2.Controls.Add(this.lblConfirmPassword);
-            this.panel2.Location = new System.Drawing.Point(327, 126);
+            this.panel2.Location = new System.Drawing.Point(298, 99);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(585, 467);
+            this.panel2.Size = new System.Drawing.Size(678, 583);
             this.panel2.TabIndex = 12;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(502, 372);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 27);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Learn More";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // learnmore1
+            // 
+            this.learnmore1.Location = new System.Drawing.Point(502, 327);
+            this.learnmore1.Name = "learnmore1";
+            this.learnmore1.Size = new System.Drawing.Size(98, 30);
+            this.learnmore1.TabIndex = 20;
+            this.learnmore1.Text = "Learn More";
+            this.learnmore1.UseVisualStyleBackColor = true;
+            // 
+            // cmbInterests
+            // 
+            this.cmbInterests.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.cmbInterests.FormattingEnabled = true;
+            this.cmbInterests.Location = new System.Drawing.Point(168, 375);
+            this.cmbInterests.Name = "cmbInterests";
+            this.cmbInterests.Size = new System.Drawing.Size(328, 24);
+            this.cmbInterests.TabIndex = 19;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(20, 372);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(144, 24);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Choose interest";
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(20, 320);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(144, 52);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Choose Membership Type";
+            // 
+            // cmbMembershipType
+            // 
+            this.cmbMembershipType.FormattingEnabled = true;
+            this.cmbMembershipType.Location = new System.Drawing.Point(168, 333);
+            this.cmbMembershipType.Name = "cmbMembershipType";
+            this.cmbMembershipType.Size = new System.Drawing.Size(328, 24);
+            this.cmbMembershipType.TabIndex = 16;
+            
             // 
             // lnkReturnToMain
             // 
             this.lnkReturnToMain.AutoSize = true;
-            this.lnkReturnToMain.Location = new System.Drawing.Point(273, 431);
+            this.lnkReturnToMain.Location = new System.Drawing.Point(273, 535);
             this.lnkReturnToMain.Name = "lnkReturnToMain";
             this.lnkReturnToMain.Size = new System.Drawing.Size(92, 16);
             this.lnkReturnToMain.TabIndex = 15;
@@ -140,7 +208,7 @@
             // btnSignup
             // 
             this.btnSignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSignup.Location = new System.Drawing.Point(263, 324);
+            this.btnSignup.Location = new System.Drawing.Point(263, 445);
             this.btnSignup.Name = "btnSignup";
             this.btnSignup.Size = new System.Drawing.Size(102, 42);
             this.btnSignup.TabIndex = 10;
@@ -162,7 +230,7 @@
             // lnkLogin
             // 
             this.lnkLogin.AutoSize = true;
-            this.lnkLogin.Location = new System.Drawing.Point(221, 397);
+            this.lnkLogin.Location = new System.Drawing.Point(221, 500);
             this.lnkLogin.Name = "lnkLogin";
             this.lnkLogin.Size = new System.Drawing.Size(201, 16);
             this.lnkLogin.TabIndex = 11;
@@ -268,6 +336,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Signup";
             this.Text = "Signup";
+            this.Load += new System.EventHandler(this.Signup_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -295,5 +364,11 @@
         private System.Windows.Forms.Button btnToggleConfirmPassword;
         private System.Windows.Forms.Button btnTogglePassword;
         private System.Windows.Forms.LinkLabel lnkReturnToMain;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbMembershipType;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button learnmore1;
+        private System.Windows.Forms.ComboBox cmbInterests;
     }
 }

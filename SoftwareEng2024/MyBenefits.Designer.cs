@@ -46,6 +46,7 @@
             // 
             this.benefitsView.BackColor = System.Drawing.Color.IndianRed;
             this.benefitsView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.benefitsView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.benefitsView.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.benefitsView.Location = new System.Drawing.Point(0, 0);
             this.benefitsView.Name = "benefitsView";

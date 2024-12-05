@@ -7,7 +7,7 @@ namespace SoftwareEng2024
 {
     public partial class Main : Form
     {
-        private int guestCounter = 1001; // Starting guest number
+        
 
         public Main()
         {
@@ -100,6 +100,13 @@ namespace SoftwareEng2024
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
+
+        private void Main_Load(object sender, EventArgs e)
         {
 
         }

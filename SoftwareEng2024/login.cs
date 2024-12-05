@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Configuration;
@@ -53,16 +54,16 @@ namespace SoftwareEng2024
             try
             {
                 string connectionString = ConfigurationManager.ConnectionStrings["UserDatabaseConnection"].ConnectionString;
+
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
 
-                    // Query to retrieve the hashed password and memberId from the database
+                    // Query to retrieve the hashed password and MemberID from the Members table
                     string query = @"
-                SELECT U.PasswordHash, M.MemberID 
-                FROM Users U
-                INNER JOIN Members M ON U.UserID = M.UserID
-                WHERE U.Username = @Username";
+            SELECT PasswordHash, MemberID 
+            FROM Members
+            WHERE Username = @Username";
 
                     using (SqlCommand cmd = new SqlCommand(query, connection))
                     {
@@ -74,14 +75,14 @@ namespace SoftwareEng2024
                             {
                                 string storedPasswordHash = reader["PasswordHash"].ToString();
                                 int memberId = Convert.ToInt32(reader["MemberID"]);
-                                string inputPasswordHash = HashPassword(password);
 
-                                if (storedPasswordHash == inputPasswordHash)
+                                // Use BCrypt to verify the password
+                                if (BCrypt.Net.BCrypt.Verify(password, storedPasswordHash))
                                 {
                                     MessageBox.Show("Login successful!");
 
                                     // Pass the MemberID to the Memberdashboard
-                                    Memberdashboard memberDashboard = new Memberdashboard(memberId--);
+                                    Memberdashboard memberDashboard = new Memberdashboard(memberId);
                                     memberDashboard.Show();
                                     this.Hide();
                                 }
@@ -92,7 +93,7 @@ namespace SoftwareEng2024
                             }
                             else
                             {
-                                MessageBox.Show("Invalid username or password.");
+                                MessageBox.Show("Invalid username.");
                             }
                         }
                     }
@@ -105,25 +106,9 @@ namespace SoftwareEng2024
             }
         }
 
-        private string HashPassword(string password)
-        {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                StringBuilder builder = new StringBuilder();
-                for (int i = 0; i < bytes.Length; i++)
-                {
-                    builder.Append(bytes[i].ToString("x2"));
-                }
-                return builder.ToString();
-            }
-        }
-
         private void lnkForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MessageBox.Show("Redirecting to Forgot Password page.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            // Navigate to Forgot Password form
             var forgotPassword = new ForgotPassword(); // Ensure ForgotPassword form exists
             forgotPassword.Show();
             this.Hide();
@@ -136,7 +121,10 @@ namespace SoftwareEng2024
             this.Hide();
         }
 
-        
+
+
+
+
 
         private void lnkReturnToMain_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
