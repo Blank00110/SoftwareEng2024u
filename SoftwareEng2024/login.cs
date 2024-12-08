@@ -61,7 +61,7 @@ namespace SoftwareEng2024
 
                     // Query to retrieve the hashed password and MemberID from the Members table
                     string query = @"
-            SELECT PasswordHash, MemberID 
+            SELECT PasswordHash, MemberID,IsAdmin  
             FROM Members
             WHERE Username = @Username";
 
@@ -75,15 +75,26 @@ namespace SoftwareEng2024
                             {
                                 string storedPasswordHash = reader["PasswordHash"].ToString();
                                 int memberId = Convert.ToInt32(reader["MemberID"]);
+                                bool isAdmin = Convert.ToBoolean(reader["IsAdmin"]);
 
                                 // Use BCrypt to verify the password
                                 if (BCrypt.Net.BCrypt.Verify(password, storedPasswordHash))
                                 {
                                     MessageBox.Show("Login successful!");
 
-                                    // Pass the MemberID to the Memberdashboard
-                                    Memberdashboard memberDashboard = new Memberdashboard(memberId);
-                                    memberDashboard.Show();
+                                    if (isAdmin)
+                                    {
+                                        // Redirect to Admin Dashboard
+                                        AdminDashboard adminDashboard = new AdminDashboard();
+                                        adminDashboard.Show();
+                                    }
+                                    else
+                                    {
+                                        // Redirect to Member Dashboard
+                                        Memberdashboard memberDashboard = new Memberdashboard(memberId);
+                                        memberDashboard.Show();
+                                    }
+
                                     this.Hide();
                                 }
                                 else
@@ -121,11 +132,6 @@ namespace SoftwareEng2024
             this.Hide();
         }
 
-
-
-
-
-
         private void lnkReturnToMain_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             var mainForm = new Main();
@@ -139,6 +145,11 @@ namespace SoftwareEng2024
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void login_Load(object sender, EventArgs e)
         {
 
         }

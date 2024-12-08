@@ -78,6 +78,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chat.Designer.cs">
+      <DependentUpon>chat.cs</DependentUpon>
+    </Compile>
     <Compile Include="chatbox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +97,11 @@
       <DependentUpon>chatbox.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="chosememint.cs">
+    <Compile Include="communitymember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="chosememint.Designer.cs">
-      <DependentUpon>chosememint.cs</DependentUpon>
+    <Compile Include="communitymember.Designer.cs">
+      <DependentUpon>communitymember.cs</DependentUpon>
     </Compile>
     <Compile Include="DCM.cs">
       <SubType>Form</SubType>
@@ -121,11 +133,23 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="memberchat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="memberchat.Designer.cs">
+      <DependentUpon>memberchat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Memberdashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Memberdashboard.Designer.cs">
       <DependentUpon>Memberdashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="membership.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="membership.Designer.cs">
+      <DependentUpon>membership.cs</DependentUpon>
     </Compile>
     <Compile Include="MyBenefits.cs">
       <SubType>Form</SubType>
@@ -147,11 +171,17 @@
     <Compile Include="Signup.Designer.cs">
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chat.resx">
+      <DependentUpon>chat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="chatbox.resx">
       <DependentUpon>chatbox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="chosememint.resx">
-      <DependentUpon>chosememint.cs</DependentUpon>
+    <EmbeddedResource Include="communitymember.resx">
+      <DependentUpon>communitymember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DCM.resx">
       <DependentUpon>DCM.cs</DependentUpon>
@@ -168,8 +198,14 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="memberchat.resx">
+      <DependentUpon>memberchat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Memberdashboard.resx">
       <DependentUpon>Memberdashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="membership.resx">
+      <DependentUpon>membership.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyBenefits.resx">
       <DependentUpon>MyBenefits.cs</DependentUpon>

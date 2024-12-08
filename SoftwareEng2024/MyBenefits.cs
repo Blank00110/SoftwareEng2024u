@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -29,7 +30,7 @@ namespace SoftwareEng2024
         {
             try
             {
-                string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\abhin\source\repos\protopppp\protopppp\Database1.mdf;Integrated Security=True";
+                string connectionString = ConfigurationManager.ConnectionStrings["UserDatabaseConnection"].ConnectionString;
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {

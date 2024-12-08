@@ -11273,12 +11273,6 @@
         L/jNpibTxmnPL+Js8vxOE5xpDty2uwlHzE9YTC+Y+/MexNTrP//Z
 </value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Discover a range of exciting events tailored for our community!
- From collaborative workshops to social gatherings, our events provide
- opportunities to connect, learn, and grow. Stay updated and book your spot
- today to be part of something inspiring</value>
-  </data>
   <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAkGBxASEhUSEBIVFRAVFhAPEBUPFRAQEBAQFREWFhYWFRUY
@@ -11436,4 +11430,7 @@
         zGP/2Q==
 </value>
   </data>
+  <metadata name="label3.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
 </root>

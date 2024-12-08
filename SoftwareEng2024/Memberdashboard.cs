@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -60,6 +61,8 @@ namespace SoftwareEng2024
         {
             LoadMembershipType(); // Load the membership type when the form loads
             LoadInterest();// Populate label
+            LoadUnreadMessagesCount();
+
         }
 
         private void Mybenefits_Click(object sender, EventArgs e)
@@ -155,5 +158,64 @@ namespace SoftwareEng2024
                 MessageBox.Show($"Error fetching interests: {ex.Message}");
             }
         }
+
+        private void CHAT_Click(object sender, EventArgs e)
+        {
+            // Opens the chat search form passing the currently logged in MemberID
+            var chatForm = new chat(memberId);
+            chatForm.Show();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void LoadUnreadMessagesCount()
+        {
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["UserDatabaseConnection"].ConnectionString;
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string query = @"
+                SELECT COUNT(*) AS UnreadCount
+                FROM Messages
+                WHERE ReceiverID = @MemberID 
+                  AND IsRead = 0;";
+
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@MemberID", memberId);
+                        int unreadCount = (int)cmd.ExecuteScalar();
+
+                        // Update the label with the count
+                        UpdateUnreadNotification(unreadCount);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading unread messages count: " + ex.Message);
+            }
+        }
+
+        private void UpdateUnreadNotification(int count)
+        {
+            if (count > 0)
+            {
+                lblUnreadCount.Visible = true;
+                lblUnreadCount.Text = count.ToString();
+
+            }
+            else
+            {
+                // If no unread messages, hide the label
+                lblUnreadCount.Visible = false;
+            }
+        }
+
+
     }
 }

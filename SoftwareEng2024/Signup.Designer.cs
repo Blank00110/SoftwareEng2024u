@@ -114,6 +114,7 @@
             this.learnmore1.TabIndex = 20;
             this.learnmore1.Text = "Learn More";
             this.learnmore1.UseVisualStyleBackColor = true;
+            this.learnmore1.Click += new System.EventHandler(this.learnmore1_Click);
             // 
             // cmbInterests
             // 
@@ -151,7 +152,6 @@
             this.cmbMembershipType.Name = "cmbMembershipType";
             this.cmbMembershipType.Size = new System.Drawing.Size(328, 24);
             this.cmbMembershipType.TabIndex = 16;
-            
             // 
             // lnkReturnToMain
             // 

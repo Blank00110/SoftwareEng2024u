@@ -40,5 +40,10 @@ namespace SoftwareEng2024
         {
 
         }
+
+        private void AboutUs_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

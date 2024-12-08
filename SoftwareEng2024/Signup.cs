@@ -330,5 +330,10 @@ namespace SoftwareEng2024
             string passwordPattern = @"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$";
             return Regex.IsMatch(password, passwordPattern) && !password.Contains(" ");
         }
+
+        private void learnmore1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

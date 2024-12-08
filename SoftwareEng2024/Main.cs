@@ -23,20 +23,10 @@ namespace SoftwareEng2024
 
         private void btnGuest_Click(object sender, EventArgs e)
         {
-            string guestID = GenerateGuestID();
+            AboutUs AboutUsForm = new AboutUs();
+            AboutUsForm.Show();
 
-            if (!string.IsNullOrEmpty(guestID))
-            {
-                MessageBox.Show($"Welcome, {guestID}. Redirecting to the dashboard...", "Guest Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                var GuestForm = new AboutUs();
-                GuestForm.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Error saving guest information. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
         private string GenerateGuestID()
         {
