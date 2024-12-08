@@ -109,6 +109,12 @@
     <Compile Include="DCM.Designer.cs">
       <DependentUpon>DCM.cs</DependentUpon>
     </Compile>
+    <Compile Include="digital connections board.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="digital connections board.Designer.cs">
+      <DependentUpon>digital connections board.cs</DependentUpon>
+    </Compile>
     <Compile Include="ForgotPassword.cs">
       <SubType>Form</SubType>
     </Compile>

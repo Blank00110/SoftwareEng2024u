@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Memberdashboard));
             System.Windows.Forms.Label label3;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Memberdashboard));
             this.Membership = new System.Windows.Forms.Button();
             this.Event = new System.Windows.Forms.Button();
             this.ChatBox_Button = new System.Windows.Forms.Button();
@@ -56,22 +56,21 @@
             this.Announcment = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lblinterest = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblmembershiptype = new System.Windows.Forms.Label();
             this.BTNMYBENEFITS = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.Mybenefits = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.lblmembershiptype = new System.Windows.Forms.Label();
-            this.lblinterest = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblUnreadCount = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.digitalcontent = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.digitalcontent = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblUnreadCount = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -85,9 +84,21 @@
             this.panel6.SuspendLayout();
             this.BTNMYBENEFITS.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // label3
+            // 
+            label3.BackColor = System.Drawing.Color.IndianRed;
+            label3.Enabled = false;
+            label3.Font = new System.Drawing.Font("Lucida Sans Unicode", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label3.ForeColor = System.Drawing.Color.Brown;
+            label3.Location = new System.Drawing.Point(11, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(184, 126);
+            label3.TabIndex = 47;
+            label3.Text = "Together\r\nCulture";
             // 
             // Membership
             // 
@@ -138,7 +149,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(68, 499);
+            this.btnLogout.Location = new System.Drawing.Point(72, 441);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(105, 32);
             this.btnLogout.TabIndex = 43;
@@ -181,7 +192,7 @@
             // 
             // CHAT
             // 
-            this.CHAT.Location = new System.Drawing.Point(64, 336);
+            this.CHAT.Location = new System.Drawing.Point(64, 327);
             this.CHAT.Name = "CHAT";
             this.CHAT.Size = new System.Drawing.Size(107, 32);
             this.CHAT.TabIndex = 46;
@@ -200,7 +211,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SoftwareEng2024.Properties.Resources.logout;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 497);
+            this.pictureBox1.Location = new System.Drawing.Point(18, 441);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(44, 34);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -210,7 +221,7 @@
             // Memebrship_icon
             // 
             this.Memebrship_icon.Image = global::SoftwareEng2024.Properties.Resources.membership;
-            this.Memebrship_icon.Location = new System.Drawing.Point(18, 236);
+            this.Memebrship_icon.Location = new System.Drawing.Point(18, 276);
             this.Memebrship_icon.Name = "Memebrship_icon";
             this.Memebrship_icon.Size = new System.Drawing.Size(44, 34);
             this.Memebrship_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -275,11 +286,10 @@
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.button9);
-            this.panel5.Controls.Add(this.panel8);
             this.panel5.Controls.Add(this.button8);
             this.panel5.Location = new System.Drawing.Point(0, 233);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(402, 333);
+            this.panel5.Size = new System.Drawing.Size(723, 264);
             this.panel5.TabIndex = 10;
             // 
             // label5
@@ -299,7 +309,7 @@
             this.button9.BackColor = System.Drawing.Color.Transparent;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.IndianRed;
-            this.button9.Location = new System.Drawing.Point(197, 132);
+            this.button9.Location = new System.Drawing.Point(385, 117);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(138, 47);
             this.button9.TabIndex = 2;
@@ -311,7 +321,7 @@
             this.button8.BackColor = System.Drawing.Color.Transparent;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button8.Location = new System.Drawing.Point(30, 132);
+            this.button8.Location = new System.Drawing.Point(165, 117);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(116, 47);
             this.button8.TabIndex = 1;
@@ -323,19 +333,19 @@
             this.button10.BackColor = System.Drawing.Color.IndianRed;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button10.Location = new System.Drawing.Point(444, 488);
+            this.button10.Location = new System.Drawing.Point(744, 586);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(211, 65);
             this.button10.TabIndex = 1;
-            this.button10.Text = "GO";
+            this.button10.Text = "GO to";
             this.button10.UseVisualStyleBackColor = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(397, 233);
+            this.pictureBox3.Location = new System.Drawing.Point(721, 425);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(357, 333);
+            this.pictureBox3.Size = new System.Drawing.Size(341, 235);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -373,8 +383,43 @@
             this.panel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel6.Location = new System.Drawing.Point(-1, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1073, 140);
+            this.panel6.Size = new System.Drawing.Size(1063, 140);
             this.panel6.TabIndex = 14;
+            // 
+            // lblinterest
+            // 
+            this.lblinterest.AutoSize = true;
+            this.lblinterest.BackColor = System.Drawing.Color.IndianRed;
+            this.lblinterest.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblinterest.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblinterest.Location = new System.Drawing.Point(715, 93);
+            this.lblinterest.Name = "lblinterest";
+            this.lblinterest.Size = new System.Drawing.Size(96, 25);
+            this.lblinterest.TabIndex = 20;
+            this.lblinterest.Text = "INTEREST";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label7.Location = new System.Drawing.Point(154, 5);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(657, 32);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "TOGETHER CULTURE MEMBER DASHBOARD";
+            // 
+            // lblmembershiptype
+            // 
+            this.lblmembershiptype.AutoSize = true;
+            this.lblmembershiptype.BackColor = System.Drawing.Color.IndianRed;
+            this.lblmembershiptype.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmembershiptype.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblmembershiptype.Location = new System.Drawing.Point(5, 93);
+            this.lblmembershiptype.Name = "lblmembershiptype";
+            this.lblmembershiptype.Size = new System.Drawing.Size(179, 25);
+            this.lblmembershiptype.TabIndex = 22;
+            this.lblmembershiptype.Text = "MEMBERSHIP TYPE";
             // 
             // BTNMYBENEFITS
             // 
@@ -382,9 +427,9 @@
             this.BTNMYBENEFITS.Controls.Add(this.button6);
             this.BTNMYBENEFITS.Controls.Add(this.Mybenefits);
             this.BTNMYBENEFITS.Controls.Add(this.label4);
-            this.BTNMYBENEFITS.Location = new System.Drawing.Point(754, 233);
+            this.BTNMYBENEFITS.Location = new System.Drawing.Point(721, 233);
             this.BTNMYBENEFITS.Name = "BTNMYBENEFITS";
-            this.BTNMYBENEFITS.Size = new System.Drawing.Size(312, 335);
+            this.BTNMYBENEFITS.Size = new System.Drawing.Size(345, 191);
             this.BTNMYBENEFITS.TabIndex = 15;
             this.BTNMYBENEFITS.Paint += new System.Windows.Forms.PaintEventHandler(this.BTNMYBENEFITS_Paint);
             // 
@@ -393,7 +438,7 @@
             this.button6.BackColor = System.Drawing.Color.IndianRed;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.Location = new System.Drawing.Point(71, 210);
+            this.button6.Location = new System.Drawing.Point(54, 132);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(198, 52);
             this.button6.TabIndex = 14;
@@ -405,7 +450,7 @@
             this.Mybenefits.BackColor = System.Drawing.Color.IndianRed;
             this.Mybenefits.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mybenefits.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Mybenefits.Location = new System.Drawing.Point(71, 85);
+            this.Mybenefits.Location = new System.Drawing.Point(54, 70);
             this.Mybenefits.Name = "Mybenefits";
             this.Mybenefits.Size = new System.Drawing.Size(198, 49);
             this.Mybenefits.TabIndex = 4;
@@ -429,88 +474,54 @@
             this.panel2.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.panel2.Location = new System.Drawing.Point(180, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1072, 713);
+            this.panel2.Size = new System.Drawing.Size(1062, 663);
             this.panel2.TabIndex = 5;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // panel8
+            // button1
             // 
-            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel8.Location = new System.Drawing.Point(197, 401);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(573, 87);
-            this.panel8.TabIndex = 16;
+            this.button1.BackColor = System.Drawing.Color.IndianRed;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(817, 175);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(158, 52);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "GO";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // lblmembershiptype
+            // digitalcontent
             // 
-            this.lblmembershiptype.AutoSize = true;
-            this.lblmembershiptype.BackColor = System.Drawing.Color.IndianRed;
-            this.lblmembershiptype.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmembershiptype.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblmembershiptype.Location = new System.Drawing.Point(5, 93);
-            this.lblmembershiptype.Name = "lblmembershiptype";
-            this.lblmembershiptype.Size = new System.Drawing.Size(179, 25);
-            this.lblmembershiptype.TabIndex = 22;
-            this.lblmembershiptype.Text = "MEMBERSHIP TYPE";
+            this.digitalcontent.AutoSize = true;
+            this.digitalcontent.BackColor = System.Drawing.Color.Transparent;
+            this.digitalcontent.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.digitalcontent.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.digitalcontent.Location = new System.Drawing.Point(729, 438);
+            this.digitalcontent.Name = "digitalcontent";
+            this.digitalcontent.Size = new System.Drawing.Size(141, 25);
+            this.digitalcontent.TabIndex = 26;
+            this.digitalcontent.Text = "Digital Content";
             // 
-            // lblinterest
+            // panel4
             // 
-            this.lblinterest.AutoSize = true;
-            this.lblinterest.BackColor = System.Drawing.Color.IndianRed;
-            this.lblinterest.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblinterest.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblinterest.Location = new System.Drawing.Point(715, 93);
-            this.lblinterest.Name = "lblinterest";
-            this.lblinterest.Size = new System.Drawing.Size(96, 25);
-            this.lblinterest.TabIndex = 20;
-            this.lblinterest.Text = "INTEREST";
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Location = new System.Drawing.Point(304, 141);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(419, 93);
+            this.panel4.TabIndex = 25;
             // 
-            // label3
+            // label8
             // 
-            label3.BackColor = System.Drawing.Color.IndianRed;
-            label3.Enabled = false;
-            label3.Font = new System.Drawing.Font("Lucida Sans Unicode", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label3.ForeColor = System.Drawing.Color.Brown;
-            label3.Location = new System.Drawing.Point(-4, 0);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(184, 126);
-            label3.TabIndex = 47;
-            label3.Text = "Together\r\nCulture";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(154, 5);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(657, 32);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "TOGETHER CULTURE MEMBER DASHBOARD";
-            // 
-            // lblUnreadCount
-            // 
-            this.lblUnreadCount.AutoSize = true;
-            this.lblUnreadCount.BackColor = System.Drawing.Color.Red;
-            this.lblUnreadCount.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnreadCount.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblUnreadCount.Location = new System.Drawing.Point(67, 39);
-            this.lblUnreadCount.Name = "lblUnreadCount";
-            this.lblUnreadCount.Size = new System.Drawing.Size(23, 25);
-            this.lblUnreadCount.TabIndex = 21;
-            this.lblUnreadCount.Text = "Y";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.IndianRed;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(7, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 25);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Chat Notification";
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.IndianRed;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(133, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(106, 25);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Next Event";
             // 
             // panel3
             // 
@@ -535,57 +546,36 @@
             this.button2.Text = "Go To Chat";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // label8
+            // label2
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.IndianRed;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(133, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 25);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "Next Event";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.IndianRed;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(7, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(158, 25);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Chat Notification";
             // 
-            // panel4
+            // lblUnreadCount
             // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Location = new System.Drawing.Point(304, 141);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(419, 93);
-            this.panel4.TabIndex = 25;
-            // 
-            // digitalcontent
-            // 
-            this.digitalcontent.AutoSize = true;
-            this.digitalcontent.BackColor = System.Drawing.Color.Transparent;
-            this.digitalcontent.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.digitalcontent.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.digitalcontent.Location = new System.Drawing.Point(404, 242);
-            this.digitalcontent.Name = "digitalcontent";
-            this.digitalcontent.Size = new System.Drawing.Size(141, 25);
-            this.digitalcontent.TabIndex = 26;
-            this.digitalcontent.Text = "Digital Content";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.IndianRed;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(817, 175);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 52);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "GO";
-            this.button1.UseVisualStyleBackColor = false;
+            this.lblUnreadCount.AutoSize = true;
+            this.lblUnreadCount.BackColor = System.Drawing.Color.Red;
+            this.lblUnreadCount.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUnreadCount.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblUnreadCount.Location = new System.Drawing.Point(7, 39);
+            this.lblUnreadCount.Name = "lblUnreadCount";
+            this.lblUnreadCount.Size = new System.Drawing.Size(23, 25);
+            this.lblUnreadCount.TabIndex = 21;
+            this.lblUnreadCount.Text = "Y";
             // 
             // Memberdashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
-            this.ClientSize = new System.Drawing.Size(1242, 708);
+            this.ClientSize = new System.Drawing.Size(1242, 663);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(label3);
@@ -608,10 +598,10 @@
             this.BTNMYBENEFITS.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -644,7 +634,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel BTNMYBENEFITS;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button Mybenefits;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label lblinterest;
